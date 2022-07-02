@@ -30,6 +30,8 @@ function saveSchedule(){
     var hour = $(this).siblings(".hour").text();
 
     var toDo = $(this).siblings(".toDo").val();
+    console.log(hour);
+    console.log(toDo);
 
     if (toDo === '') {
         localStorage.setItem(hour, '')
@@ -58,11 +60,12 @@ function timeOut(){
     $('.notification-block').text('');
 }
 
-//listener function for saving to local storage
+//listener function for displaying notification saved to local storage, and saving to local storage
 $('.saveBtn').click(function(){
-    saveSchedule();
     $('.notification-block').text('To Do saved to local storage ✅');
     notification();
 });
+
+$('.saveBtn').click(saveSchedule);
 
 init ();
