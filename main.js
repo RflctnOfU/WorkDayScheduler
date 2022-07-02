@@ -33,6 +33,40 @@ const textBlocks = [
     $('textarea#17'),
 ];
 
+const clickBtns = [
+    $('#one'),
+    $('#two'),
+    $('#three'),
+    $('#four'),
+    $('#five'),
+    $('#six'),
+    $('#seven'),
+    $('#eight'),
+    $('#nine'),
+]
+
+var text1 = $('#9').contents().find().text();
+var text2 = $('#10').val();
+var text3 = $('#11').val();
+var text4 = $('#12').val();
+var text5 = $('#13').val();
+var text6 = $('#14').val();
+var text7 = $('#15').val();
+var text8 = $('#16').val();
+var text9 = $('#17').val();
+
+const textArea = [
+    text1,
+    text2,
+    text3,
+    text4,
+    text5,
+    text6,
+    text7,
+    text8,
+    text9,
+]
+
 for (var i = 0; i < textBlocks.length; i++) {
     if (textBlocks[i].attr('name') < time) {
         textBlocks[i].removeClass('present future').addClass('past');
@@ -42,3 +76,12 @@ for (var i = 0; i < textBlocks.length; i++) {
         textBlocks[i].removeClass('past present').addClass('future');
     }
 };
+
+for (var i = 0; i < clickBtns.length; i++) {
+    clickBtns[i].click(function(e) {
+        e.preventDefault();
+        // console.log(text);
+        console.log(text1);
+    });
+}
+
