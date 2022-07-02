@@ -29,6 +29,7 @@ textarea {
 .notification-block {
   text-align: center;
   padding-bottom: 7px;
+  height: 20px;
 }
 
 .time-block {
@@ -46,6 +47,9 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .past {
